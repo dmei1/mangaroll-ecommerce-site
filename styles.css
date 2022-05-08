@@ -490,6 +490,23 @@ select {
   color: #f78b24;
 }
 
+.books__loading--spinner {
+  display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+  display: block !important;
+}
+
 .fa-spinner {
   animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rorate(0)
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

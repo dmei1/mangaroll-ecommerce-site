@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library</title>
+    <title>MangaRoll</title>
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
@@ -59,14 +59,16 @@
               <h2 class="section__title books__header--title">
                 All <span class="purple">Books</span>
               </h2>
-              <select name="" id="filter">
+              <select name="" id="filter" onchange="filterBooks(event)">
                 <option value="" disabled selected>Sort</option>
                 <option value="LOW_TO_HIGH">Price: Low to High</option>
                 <option value="HIGH_TO_LOW">Price: High to Low</option>
                 <option value="RATING">Rating</option>
               </select>
             </div>
-            <div class="books"></div>
+            <div class="books">
+              <i class="fas fa-spinner books__loading--spinner"></i>
+            </div>
           </div>
         </div>
       </section>
